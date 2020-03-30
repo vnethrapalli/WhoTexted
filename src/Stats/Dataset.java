@@ -6,9 +6,11 @@ public class Dataset {
     double[] values;
     double mean;
     double sampleStdDev;
+    int size;
 
     public Dataset(double[] values) {
         this.values = values;
+        size = values.length;
 
         //mean
         double total = 0;
@@ -25,6 +27,17 @@ public class Dataset {
         System.out.println(mean);
         System.out.println(sampleStdDev);
 
+    }
 
+    public double getMean() {
+        return mean;
+    }
+
+    public double getSampleStdDev() {
+        return sampleStdDev;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
